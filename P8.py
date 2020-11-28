@@ -24,5 +24,5 @@ def ratarataHargaFruit(fruit):
 a = ratarataHargaFruit(fruit)
 b = ratarataHargaFruit(fruit)
 
-print(a)
-print(b)
+print('Rata-rata harga fruit adalah :',a)
+print('Rata-rata harga fruit adalah :',b)
