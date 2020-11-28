@@ -3,13 +3,16 @@
 sayur = ['bayam','kangkung','wortel','selada']
 
 def tambahSayur() :
-    sayurTambahan = input('Masukkan nama sayur yang ingin ditambahkan :')
+    sayurTambahan = input('Masukkan nama sayur yang ingin ditambahkan :').lower()
     sayur.append(sayurTambahan)
     return sayur
 
 def hapusSayur() :
-    sayurHapus = input('Masukkan nama sayur yang ingin dihapus :')
-    sayur.append(sayurHapus)
+    sayurHapus = input('Masukkan nama sayur yang ingin dihapus :').lower()
+    if(sayurHapus in sayur) :
+        sayur.remove(sayurHapus)
+    else :
+        print('Sayur itu tidak ada di dalam data')
     return sayur
 
 def readSayur() :
@@ -33,7 +36,7 @@ while(r == True) :
         hapusSayur()
 
     elif(opsi == 'C' or opsi == 'c') :
-        tambahSayur()
+        readSayur()
 
     elif(opsi == 'D') :
         break
