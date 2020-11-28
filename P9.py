@@ -11,15 +11,25 @@ def jumlahFruit():
     print('-------------------------------')
     print('Total Harga            :',fruit.get(namaFruit,0)*jumlah)
 
-namaFruit = input('Nama fruit yang dibeli :')
+print('Daftar fruit dan harga :')
 
-try:
-    if(namaFruit in fruit.keys()):
-        jumlahFruit()
+for x,y in fruit.items() :
+    print('.', x, ':', y)
 
-    else:
-        print('Maaf,nama fruit yang anda masukkkan tidak ada')
+while True :
+    
+    namaFruit = input('Nama fruit yang dibeli :')
+    
+    if(namaFruit not in fruit.keys()) :
+        print('Mohon maaf, fruit yang anda masukkan tidak ada')
+        continue
 
-except ValueError:
-    print('Silakan jumlah fruit dengan benar')
-    jumlahFruit()
+    else :
+        while True :
+            try :
+                jumlahFruit()
+                break
+            
+            except ValueError :
+                continue
+        break
