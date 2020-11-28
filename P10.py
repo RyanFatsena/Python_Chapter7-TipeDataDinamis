@@ -10,6 +10,11 @@ def checkOut(databaseFruit,namaFruit,banyakKilo):
     totalHarga = hargaFruit * banyakKilo
     return totalHarga
 
+print('Daftar fruit dan harga :')
+
+for x,y in fruit.items() :
+    print('.', x, ':', y)
+
 totalHarga = 0
 
 selesai = False
